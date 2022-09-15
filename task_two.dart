@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled1/project_cis/order.dart';
-import 'package:untitled1/project_cis/payment.dart';
 
 class taskTwo extends StatefulWidget {
   @override
@@ -547,7 +544,276 @@ class _taskTwoState extends State<taskTwo> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  showModalBottomSheet(
+                      context: context,
+                      builder: (ctx) {
+                        return Container(
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(50)),
+                          width: 200,
+                          height: 1000,
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 25),
+                                      child: Text(
+                                        'Checkout',
+                                        style: TextStyle(
+                                            fontSize: 30,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 200),
+                                      child: Icon(
+                                        Icons.cancel_outlined,
+                                        size: 30,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Divider(
+                                height: 2,
+                                color: Colors.grey,
+                                endIndent: 15,
+                                indent: 15,
+                                thickness: 1,
+                              ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 15),
+                                    child: Text(
+                                      'Delivery',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.grey),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 130),
+                                    child: Text(
+                                      'Select Method',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ),
+                                  Icon(
+                                    Icons.navigate_next,
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Divider(
+                                height: 2,
+                                color: Colors.grey,
+                                endIndent: 15,
+                                indent: 15,
+                                thickness: 1,
+                              ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 15),
+                                    child: Text(
+                                      'Pament',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.grey),
+                                    ),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 212),
+                                      child: Image.asset(
+                                        'assets/images/visa.jpg',
+                                        height: 30,
+                                        width: 50,
+                                      )),
+                                  Icon(
+                                    Icons.navigate_next,
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Divider(
+                                height: 2,
+                                color: Colors.grey,
+                                endIndent: 15,
+                                indent: 15,
+                                thickness: 1,
+                              ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 15),
+                                    child: Text(
+                                      'Promo Code',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.grey),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 100),
+                                    child: Text(
+                                      'Pick discount',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ),
+                                  Icon(
+                                    Icons.navigate_next,
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Divider(
+                                height: 2,
+                                color: Colors.grey,
+                                endIndent: 15,
+                                indent: 15,
+                                thickness: 1,
+                              ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 15),
+                                    child: Text(
+                                      'Total Cost',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.grey),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 177),
+                                    child: Text(
+                                      '\$13.97',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ),
+                                  Icon(
+                                    Icons.navigate_next,
+                                    size: 25,
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Divider(
+                                height: 2,
+                                color: Colors.grey,
+                                endIndent: 15,
+                                indent: 15,
+                                thickness: 1,
+                              ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 15),
+                                child: RichText(
+                                  text: TextSpan(
+                                    text:
+                                        'By placing on order you agree to our       ',
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                    ),
+                                    children: [
+                                      TextSpan(
+                                        text: 'Terms',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: '  and  ',
+                                        style: TextStyle(
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: 'Privacy Policy',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Place Order",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  style: ElevatedButton.styleFrom(
+                                    primary: Colors.green,
+                                    fixedSize: Size(double.maxFinite, 55),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      });
+                },
                 child: Text(
                   "Go to Checkout",
                   style: TextStyle(
